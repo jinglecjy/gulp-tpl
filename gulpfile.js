@@ -65,7 +65,7 @@ gulp.task('watchscss',function(){
        const paths = watchPath(event,'src/scss/','dist/css/');
        gutil.log(gutil.colors.green(event.type) + ' ' + paths.srcPath);
        gutil.log('Dist: ' + paths.distDir);
-       paths.srcPath = 'src\\scss\\style.scss';
+       paths.srcPath = 'src/scss/**/style.scss';
     //    if(paths.srcPath !== 'src\\scss\\style.scss') return false;
        const combined = combiner.obj([
            gulp.src(paths.srcPath),   
